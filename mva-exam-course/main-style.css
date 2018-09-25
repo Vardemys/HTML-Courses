@@ -1,0 +1,153 @@
+body{
+    background : black;
+}
+
+h1, h2,h3{
+    font-family: Arial;
+    color: black;
+}
+/* Typing this just as a test*/
+/*maybe works*/
+/*
+@font-face{
+font-family: "name";
+src: url("http://website/fontfile");
+}
+
+header h1{
+    display: block;
+    color: black;
+    text-align: center;
+    margin: 0 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* fonts types: Serif con ptas al final/decoraciones, Sans Serif sin decoraciones, Monospace todas las letras ocupan lo mismo*/
+header{
+    background-color: #b3d1f3;
+    padding: 5px 0px;
+    border-color: black;
+    border-style: hidden;
+}
+
+.mainBody{ /*its a class*/
+    margin: 0px 0px;
+    /*background-color: #dbd7d2;*/
+    background-color: black;
+
+}
+nav{
+    background-color: aliceblue;
+    width: 100%;
+    text-align: center;
+}
+#myForm{
+    background-color: white;
+}
+#tableEx{
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    right: auto;
+    left: auto;
+}
+#captionTable{
+    background-color: white;
+    text-align: center;
+    margin: 0px 0px;
+}
+#myVideo{
+    display: block;
+    border-color: black;
+    /* border-style: groove;
+       margin-left: auto;
+       margin-right: auto;
+       width: auto;
+    */
+width: 100vw;
+}
+.pileImg{
+    float: left;
+    border-color: black;
+    border-style: dotted;
+}
+/* flow: block/inline */
+/* float : left; will pile objects at the left*/
+
+#myLists{
+    background-color: azure;
+    margin: 0px 0px;
+    clear: both; /*otherwise tries to stay to the left with the images*/
+} 
+
+/* overflow property to scroll = scroll dentro de bounding box for seeing content
+visible se sale de la caja
+hidden lo oculta
+p{
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    overflow: scroll | visible | hidden; choose 
+}
+*/
+
+/* flexboxes adapt to browsersize using media queries using display property flexbox and inline flexbox*/
+#myFlexbox{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+.blue{
+    background-color: blue;
+    height: 80px;
+    width: 100px;
+}
+.red{
+    background-color: red;
+    height: 80px;
+    width: 100px;
+}
+
+/* GRIDS */
+#myGrid{
+    display: grid;
+    grid-template-columns: 40px auto 50px; /* 3 cols con esos anchos. auto ocupa todo el ancho*/
+    /* grid-template-columns: [primera] 40px [segunda] auto [tercera] 50px; se pueden nombrar, mas de un nombre tb [n1 n2]*/
+    grid-template-rows: 25% 100px auto; /* 3 rows 2fr= 2 fractions of web */
+    /*grid-template-columns: repeat(number of cols, width, name) will create 3 cols*/
+    background-color: grey;
+}
+#blue1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: blue;
+}
+#red1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: red;
+}
+#blue2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: blue;
+}
+#red2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: red;
+}
+footer{
+    background-color: beige;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
