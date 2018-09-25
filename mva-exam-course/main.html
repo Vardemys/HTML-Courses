@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <head>
     <link href="main-style.css" rel="stylesheet" type="text/css">
+    <!-- js may go here in head-->
+    <script type="text/javascript" src="script.js"></script>
+    
 <title>MVA Web</title>
 <!-- nested in head CSS3
 <style>
@@ -14,7 +17,9 @@
 <nav> 
     <a href="http://www.google.com">Google</a>
 </nav>
-
+<!--- embedded javascript
+<script type="text/javascript">document.write("HELLO")</script>
+-->
 <header> <h1>This is a MVA website</h1></header>
 <div class="mainBody">
     <!-- <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" id="myImage" alt="Test logo" title="Google logo"/>-->
@@ -114,7 +119,25 @@
     <div id="blue2">3</div>
     <div id="red2">4</div>
 </div>
+<div id="gradient1"></div>
+<div id="gradient2"></div>
+<div class="transition">TRANSFORMS rotation scale translate transition over time...</div>
+<!-- button calling js from here-->
+<button style="height : 100px;width:200px" class="animated" onclick="doSomething()">Animated button!</button>
+<p id="editthis" style="background:white">
+    Nothing
+</p>
+<div id="DOMdemo">
+    Press the button and JS will write here the date
+</div>
+<div style="background-color:white">
+    <p >
+        This is the text we have to select:
+        <input type="text" value="selectable" onselect="doThis()"> <!-- onselect calls function in js file-->
+    </p>
 
+</div>
+<button onclick="show_image('http://www.dronoss.com/index_htm_files/317.png', 300, 300, 'Stella');">Display an Image</button>
 <footer>
     This is the footer 
 </footer>

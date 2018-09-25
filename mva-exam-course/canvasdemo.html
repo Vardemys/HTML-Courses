@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Canvas Demo</title>
+    <script type="text/javascript" src="connection.js"></script>
+    <script type="text/javascript">
+    function f1(){
+        var canvas= document.getElementById("smallRect");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "Blue";
+        ctx.fillRect(5,5,150,75);
+    }
+        </script>
+
+</head>
+<body onload="f1();">
+    <h1> SHOWING HOW CANVAS WORK && GEOLOCATION && SAVING DATA </h1>
+    <!--
+    <canvas id="myCanvas" width="400" height="100"
+    style="border:3px solid #c3c3c3;">
+    your browser doesnt support canvas</canvas>
+    -->
+    <canvas id="smallRect" width="200" height="200" style="border:3px solid #c3c3c3;">
+    </canvas>
+    <canvas id="smallRect2" width="200" height="200" style="border:3px solid #c3c3c3;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Inscribed_square.svg/220px-Inscribed_square.svg.png" alt="A blue rect"/>
+    </canvas>
+    <h1 id="locat">Location</h1>
+
+
+</body>

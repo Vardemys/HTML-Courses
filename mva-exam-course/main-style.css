@@ -5,9 +5,9 @@ body{
 h1, h2,h3{
     font-family: Arial;
     color: black;
+    text-align: center;
 }
-/* Typing this just as a test*/
-/*maybe works*/
+
 /*
 @font-face{
 font-family: "name";
@@ -96,15 +96,39 @@ display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 }
+/* Shadow and round borders*/
+/*shadow(h shadow, v shadow, blur, color)*/
 .blue{
     background-color: blue;
+    padding: 15px;
     height: 80px;
     width: 100px;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 10px 10px 8px #808080;
 }
+/* transparency*/
 .red{
     background-color: red;
     height: 80px;
     width: 100px;
+    opacity: 0.5;/*1=opaque 0=transparent*/
+}
+/* linear/radial(center) gradient to top to bottom to corner 110deg */
+/* up to 10% completely white, to 80% mixed, then complete blue*/
+#gradient1{
+    border-radius: 12px;
+    height: 200px;
+    width: 200px;
+    /*background: linear-gradient(to top, white 10%, blue 80%);*/
+    /* radial= elipse, circle...*/
+    background: radial-gradient(circle at center, white 1%, blue 99%);
+}
+#gradient2{
+    border-radius: 12px;
+    height: 200px;
+    width: 200px;
+    background: linear-gradient(to top, white 10%, blue 80%);
+    /* radial= elipse, circle...*/
 }
 
 /* GRIDS */
@@ -143,6 +167,54 @@ flex-wrap: wrap;
     grid-row-start: 1;
     grid-row-end: 2;
     background-color: red;
+}
+/* Transforms */
+.transition{
+    height: 300px;
+    width: 300px;
+    background-color: green;
+    /*transform: translate(200px, 0px);*/
+    /*transform: rotate(45deg);*/
+    /*transform: scale(0.5,0.5);*/
+    /*transform: skew(45deg,15deg);*/
+    /* for 3d rotation rotateX (horiz) or rotateY (vert axis)*/
+    transition-property: background;
+    transition-duration: 2s;
+}
+.transition:hover{
+    background: #ff6a00;
+}
+
+/* animations */
+@keyframes glow{
+    from{
+        background-color: blue;
+    }
+    50%{
+        background-color: yellow    
+    }
+    to{
+        background-color: red;
+    }
+}
+/* name has to be same as selector */
+.animated{
+    animation-name: glow;
+    animation-duration: 15s;
+}
+
+#DOMdemo{
+    background-color: white;
+    height: 200px;
+    width: 200px;
+}
+
+#demoTextSelect{
+    background-color: gray;
+    height: 200px;
+}
+#addedImg{
+    background-color: white;
 }
 footer{
     background-color: beige;
