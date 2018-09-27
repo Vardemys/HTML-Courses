@@ -1,24 +1,113 @@
 /***************************
-****************************
-Reset Styles
+****************************/
+
+/*Reset Styles
 ****************************
 ***************************/
+@import "AdvCSS_Mod1_normalize.css";
 
+/* change all elements to border box*/
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+/*Color List:
+- light blue = 00AEEF;
+- dark blue = 1C75BC
+- green = 8DC63F
+- dark green = 009444
+- orange = F7941E
+- dark orange = F15A29
+- brown = 594a42; */
 
 /***************************
 ****************************
 Base Styles
 ****************************
 ***************************/
+body{
+    color: #414042;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
 
-
+h1, h2, h3{
+    font-weight: bold;
+}
+a{
+    color: #8dc63f;
+    font-weight: bold;
+}
+a:hover{
+    text-decoration: underline;
+}
 /***************************
 ****************************
 Layout Styles
 ****************************
 ***************************/
+.container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1170px;
+}
+.row{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class *="col-"]{ /* all classes that start with col*/
+width: 100%;
+padding-left: 15px;
+padding-right: 15px;
+}
 
 
+/*media queries*/
+/* Media Query small and above */
+@media (min-width:48em){
+    [class*='col-'] {
+        float:left; /* put one side to side to other if they fit*/
+    }
+    /* Column one third*/
+    .col-1-3{
+        width: 33.333%;
+    }
+    /* column two thirds*/
+    .col-2-3{
+        width: 66.66%;
+    }
+    .col-1-4{
+        width: 25%;
+        min-height: 1px; /* avoids columns for colapsing horizontally when 1 block is empty*/
+    }
+    .col-1-6{
+        width: 16.6666%;
+        min-height: 1px;
+    }
+}
+@media (min-width:48em){
+    .pull-right-something{ /*one element has to stay on left one on right except if as column and not row, then float left*/
+        float: right;
+    }
+}
+/* Media Query extra small */
+@media only screen and (max-width:47.9375em){
+    .remove-gutter-xs{ /*when in mobile the row goes colum then remove paddings*/
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
 /***************************
 ****************************
 Module Styles
@@ -31,3 +120,14 @@ Module Styles
 Theme Styles
 ****************************
 ***************************/
+.background-primary{
+background-color: #F7941E; /* Orange */
+}
+
+.background-secondary{
+    background: #00AEEF; /*Blue*/
+}
+
+.background-tertiary{
+    background: #8DC63F; /*Green*/
+}
